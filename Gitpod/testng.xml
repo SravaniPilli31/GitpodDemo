@@ -1,0 +1,7 @@
+<suite name = "Gitpod">
+    <test name = "gitpod test">
+        <classes>
+        <class name = "LaunchBrowser"/>
+        </classes>
+    </test>
+</suite>
