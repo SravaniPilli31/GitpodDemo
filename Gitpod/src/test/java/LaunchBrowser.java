@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 
 public class LaunchBrowser {
-	
+
 	@Test
 	public void getConection(){
 //		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
@@ -16,9 +16,11 @@ public class LaunchBrowser {
 //		options.addArguments("test-type");
 //		capabilities.setCapability("chrome.binary", "<Path to binary>");
 //		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-		System.out.println("Step 1");
-	WebDriver driver = new ChromeDriver();
-	System.out.println("Step 2");
+		WebDriver driver = null;
+        System.setProperty("webdriver.chrome.driver","chrome.exe");
+		driver = new ChromeDriver();
+        System.out.println("Step 1");
+	    System.out.println("Step 2");
 		driver.get("https://www.indeed.com/");
 		System.out.println("Step 3");
 	}
