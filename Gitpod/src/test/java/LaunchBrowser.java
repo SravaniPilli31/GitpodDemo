@@ -17,8 +17,11 @@ public class LaunchBrowser {
 //		capabilities.setCapability("chrome.binary", "<Path to binary>");
 //		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		WebDriver driver = null;
-        System.setProperty("webdriver.chrome.driver","chrome.exe");
-		driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver","/usr/bin/chromium-browser");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--disable-setuid-sandbox");
+        chromeOptions.addArguments("--no-sandbox");
+		driver = new ChromeDriver(chromeOptions);
         System.out.println("Step 1");
 	    System.out.println("Step 2");
 		driver.get("https://www.indeed.com/");
